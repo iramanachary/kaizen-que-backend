@@ -48,11 +48,11 @@ const FormList = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {data && data.map((item) => (
+                        { data && data.length > 0 ? data.map((item) => (
                             <tr key={item.id} className="odd:bg-white  even:bg-gray-50  border-b  border-gray-200">
-                                <th scope="row" className="px-6 py-4 font-medium text-black whitespace-nowrap dark:text-white">
+                                <td scope="row" className="px-6 py-4 ">
                                    {item.fullName}
-                                </th>
+                                </td>
                                 <td className="px-6 py-4">
                                     {item.email}
                                 </td>
@@ -63,7 +63,13 @@ const FormList = () => {
                                     {localDateTime(item.createdAt)}
                                 </td>
                             </tr>
-                        ))}
+                        )) :(
+                            <tr  className="odd:bg-white  even:bg-gray-50  border-b  border-gray-200">
+                                <td colSpan={4} scope="row" className="px-6 py-4 text-center">
+                                  No Data Found!
+                                </td>
+                            </tr>
+                        )}
 
                     </tbody>
                 </table>
