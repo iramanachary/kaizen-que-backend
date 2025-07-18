@@ -9,7 +9,7 @@ This project provides a simple RESTful API to handle form submissions. It allows
 
 ## 📁 Folder Structure
 
-
+```
 backend/
 ├── routes/
 │   └── form/
@@ -19,20 +19,19 @@ backend/
 ├── .env
 ├── server.js
 └── package.json
-
-
+```
 
 ---
 
 ##  Environment Variables (.env) 
-
+```
 DB_HOST=your_database_host
 DB_PORT=your_database_port
 DB_USER=your_database_user
 DB_PASS=your_database_password
 DB_NAME=your_database_name
 URL=http://localhost:3000 # or your frontend URL if CORS is implemented
-
+```
 
 ## 🚀 How to Run Locally
 
